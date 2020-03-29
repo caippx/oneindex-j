@@ -88,7 +88,7 @@ class IndexController{
 		}elseif($_SERVER['REQUEST_METHOD'] == 'POST' || !is_null($_GET['s']) ){
 			return $this->show($item);
 		}else{//返回下载链接
-			if (config('proxy_domain') != ""){
+			if (config('proxy_domain') != "" && config('main_domain') != "" ){
 			$url = str_replace(config('main_domain'),config('proxy_domain'),$item['downloadUrl']);
 			}else {
 				$url = $item['downloadUrl'];
