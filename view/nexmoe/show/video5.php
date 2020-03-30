@@ -8,7 +8,12 @@ $item['thumb'] = onedrive::thumbnail($item['path']);
 <div class="mdui-container-fluid">
 	<div class="nexmoe-item">
 	<video class="mdui-video-fluid mdui-center" preload controls poster="<?php @e($item['thumb']);?>">
-	  <source src="<?php e($item['downloadUrl']);?>" type="video/mp4">
+	  <source src="<?php if (config('proxy_domain') != "" && config('main_domain') != "" ){
+			$url = str_replace(config('main_domain'),config('proxy_domain'),$item['downloadUrl']);
+			}else {
+				$url = $item['downloadUrl'];
+			}
+e($url);?>" type="video/mp4">
 	</video>
 	<!-- 固定标签 -->
 	<div class="mdui-row">
