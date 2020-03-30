@@ -1,6 +1,11 @@
 <?php view::layout('layout')?>
 <?php
 $item['thumb'] = onedrive::thumbnail($item['path']);
+if (config('proxy_domain') != "" && config('main_domain') != "" ){
+			$url = str_replace(config('main_domain'),config('proxy_domain'),$item['downloadUrl']);
+			}else {
+				$url = $item['downloadUrl'];
+			}
 ?>
 <?php view::begin('content');?>
 <link class="dplayer-css" rel="stylesheet" href="//cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
@@ -36,7 +41,7 @@ const dp = new DPlayer({
 	container: document.getElementById('dplayer'),
 	lang:'zh-cn',
 	video: {
-	    url: '<?php e($item['downloadUrl']);?>',
+	    url: '<?php e($url);?>',
 	    pic: '<?php @e($item['thumb']);?>',
 	    type: 'auto'
 	}
