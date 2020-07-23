@@ -1,19 +1,23 @@
-<?php view::layout('layout')?>
-
 <?php 
 $item['thumb'] = onedrive::thumbnail($item['path']);
-?>
 
-<?php view::begin('content');?>
+$downloadUrl = $item['downloadUrl'];
+ 	if (config('proxy_domain') != ""){
+ 	$downloadUrl = str_replace(config('main_domain'),config('proxy_domain'),$item['downloadUrl']);
+ 	}else {
+ 		$downloadUrl = $item['downloadUrl'];
+ 	}
+?>
+<style>
+	.mdui-img-fluid, .mdui-video-fluid {
+    	max-height: -webkit-fill-available !important;
+    }
+</style>
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.css">
 <div class="mdui-container-fluid">
 	<div class="nexmoe-item">
 	<video class="mdui-video-fluid mdui-center" preload controls poster="<?php @e($item['thumb']);?>">
-	  <source src="<?php if (config('proxy_domain') != "" && config('main_domain') != "" ){
-			$url = str_replace(config('main_domain'),config('proxy_domain'),$item['downloadUrl']);
-			}else {
-				$url = $item['downloadUrl'];
-			}
-e($url);?>" type="video/mp4">
+	  <source src="<?php e($item['downloadUrl']);?>" type="video/mp4">
 	</video>
 	<!-- 固定标签 -->
 	<div class="mdui-row">
@@ -38,4 +42,5 @@ e($url);?>" type="video/mp4">
 	</div>
 </div>
 <a href="<?php e($url);?>" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
-<?php view::end('content');?>
+
+

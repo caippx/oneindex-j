@@ -88,7 +88,7 @@ class IndexController{
 		}elseif($_SERVER['REQUEST_METHOD'] == 'POST' || !is_null($_GET['s']) ){
 			return $this->show($item);
 		}else{//返回下载链接
-			if (config('proxy_domain') != "" && config('main_domain') != "" ){
+			if (config('proxy_domain') != ""){
 			$url = str_replace(config('main_domain'),config('proxy_domain'),$item['downloadUrl']);
 			}else {
 				$url = $item['downloadUrl'];
@@ -161,7 +161,10 @@ class IndexController{
 
 		$show = config('show');
 		foreach($show as $n=>$exts){
-			if(in_array($ext,$exts)){
+			if ($ext == 'pdf'){
+				return view::load('show/pdf')->with($data);
+			}
+			elseif(in_array($ext,$exts)){
 				return view::load('show/'.$n)->with($data);
 			}
 		}
