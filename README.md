@@ -2,7 +2,7 @@
 [od.xkx.me](https://od.xkx.me/)
 
 ## 挂载Sharepoint 
-## 打开文件编辑器里打开 lib/onedrive.php，第75行，把me换成你的sites/site-id 。
+打开文件编辑器里打开 lib/onedrive.php，第75行，把me换成你的sites/site-id 。
 
 ## V佬的项目基础上更新
 
