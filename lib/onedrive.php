@@ -106,11 +106,16 @@
 			
 			foreach((array)$data['value'] as $item){
 				//var_dump($item);
+				if (config('proxy_domain') != ""){
+				$url = str_replace(config('main_domain'),config('proxy_domain'),$item['@microsoft.graph.downloadUrl']);
+				}else {
+					$url = $item['@microsoft.graph.downloadUrl'];
+				}
 				$items[$item['name']] = array(
 					'name'=>$item['name'],
 					'size'=>$item['size'],
 					'lastModifiedDateTime'=>strtotime($item['lastModifiedDateTime']),
-					'downloadUrl'=>$item['@microsoft.graph.downloadUrl'],
+					'downloadUrl'=>$url,
 					'folder'=>empty($item['folder'])?false:true
 				);
 			}
