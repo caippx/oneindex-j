@@ -4,9 +4,9 @@ class AdminController{
 	static $default_config = array(
 	  'site_name' => 'OneIndex',
 	  'title_name' => 'Index of /',
-	  'password' => 'oneindex',
+	  'password' => 'malaohu',
 	  'drawer' => '<br>',
-	  'drawer_img' => 'https://image.suning.cn/uimg/ZR/share_order/158562116951626812.jpg',
+	  'drawer_img' => 'https://p.pstatp.com/origin/1382000027a60aefe53b2',
 	  'style'=>'nexmoe',
 	  'onedrive_root' =>'',
 	  'cache_type'=>'secache',
