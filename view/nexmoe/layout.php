@@ -4,13 +4,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
 	<title><?php e($title.' - '.config('site_name'));?></title>
-	<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.css">
-	<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/js/mdui.min.js"></script>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@0.4.1/dist/css/mdui.min.css">
+	<script src="//cdn.jsdelivr.net/npm/mdui@0.4.1/dist/js/mdui.min.js"></script>
 	<script src="//cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>	
 	<script src="//cdn.staticfile.org/layer/2.3/layer.js"></script>
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-	<link rel="shortcut icon" href="https://image.suning.cn/uimg/ZR/share_order/158562104413864293.jpg">
+	<link rel="shortcut icon" href="https://p.pstatp.com/origin/1382b00027c7262618dec">
 
 	 <style>
 		.mdui-appbar .mdui-toolbar{
