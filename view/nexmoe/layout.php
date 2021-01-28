@@ -10,7 +10,7 @@
 	<script src="//cdn.staticfile.org/layer/2.3/layer.js"></script>
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-	<link rel="shortcut icon" href="https://p.pstatp.com/origin/1382b00027c7262618dec">
+	<link rel="shortcut icon" href="https://p.pstatp.com/origin/febf00036f559a345aa2">
 
 	 <style>
 		.mdui-appbar .mdui-toolbar{
