@@ -2,11 +2,13 @@
 
 require 'init.php';
 ini_set('memory_limit', '128M');
-
-if (oneindex::refresh_cache(get_absolute_path(config('onedrive_root')))){
-echo "ok";
+$key = $_GET['key'];
+if ($key == config('password')){
+oneindex::refresh_cache(get_absolute_path(config('onedrive_root')));
+echo "刷新完成";
 }else{
-echo "false";
+echo "密码错误";
 }
+
 
 ?>
