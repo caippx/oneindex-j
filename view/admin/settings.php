@@ -25,7 +25,7 @@
 		  <input class="mdui-textfield-input" type="text" name="proxy_domain" value="<?php echo $config['proxy_domain'];?>"/>
 		</div>
 		<div class="mdui-textfield">
- 		  <h4>API(如切换成SharePoint，请将链接的"me"改成"sites/{site-id}" |<a target="_blank" href="https://od.xkx.me/sp.php">site-id获取</a>)</h4>
+ 		  <h4>API(如切换成SharePoint，请将链接的"me"改成"sites/{site-id}" |<a target="_blank" href="sp.php">site-id获取</a>)</h4>
 		  <input class="mdui-textfield-input" type="text" name="api_url" value="<?php echo $config['api_url'];?>"/>
  		</div>
 		<div class="mdui-textfield">
