@@ -162,10 +162,10 @@ class AdminController{
 			config('redirect_uri',$_POST['redirect_uri']);
 			if($_POST['type'] == '2'){
 				config('oauth_url','https://login.partner.microsoftonline.cn/common/oauth2/v2.0');
-				config('api_url','https://microsoftgraph.chinacloudapi.cn/v1.0');}
+				config('api_url','https://microsoftgraph.chinacloudapi.cn/v1.0/me');}
 			else {
 				config('oauth_url','https://login.microsoftonline.com/common/oauth2/v2.0');
-				config('api_url','https://graph.microsoft.com/v1.0');
+				config('api_url','https://graph.microsoft.com/v1.0/me');
 			};
 			return view::direct('?step=2');
 		}
