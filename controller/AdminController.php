@@ -8,6 +8,7 @@ class AdminController{
 	  'drawer' => '<br>',
 	  'drawer_img' => 'https://p.pstatp.com/origin/1382000027a60aefe53b2',
 	  'style'=>'nexmoe',
+	  'api_url'=>'',
 	  'onedrive_root' =>'',
 	  'cache_type'=>'secache',
 	  'cache_expire_time' => 3600,
@@ -15,7 +16,7 @@ class AdminController{
 	  'page_item' => 50,
 	  'root_path' => '?',
 	  'show'=> array (
-	  	'stream'=>['txt'],
+	    'stream'=>['txt'],
 	    'image' => ['bmp','jpg','jpeg','png','gif','webp'],
 	    'video5'=>[],
 	    'video'=>['mpg','mpeg','mov','flv','mp4','webm','mkv','m3u8'],
